@@ -1,0 +1,83 @@
+body{
+  background-image: url("http://www.planwallpaper.com/static/images/maxresdefault.jpg");
+}
+.colorList{
+  display:flex;
+  justify-content: center;
+
+}
+.divColor{
+  margin-bottom: 25px;
+  content:url("https://www.iconsfind.com/wp-content/uploads/2015/11/20151129_565a6eb3ad01f-210x210.png");
+}
+.eraser{
+  width:30px;
+  height:25px;
+  background-color: white;
+  margin-left: 20px;
+  margin-top: 30px;
+  float:left;
+  border-radius:50px;
+  margin-bottom: 25px;
+  content:url("http://www.freeiconspng.com/uploads/eraser-icon-20.png");
+}
+.eraser:hover{
+  -moz-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+
+  -webkit-transition: transform 1.05s ease-in-out;
+  -moz-transition:transform 1.05s ease-in-out;
+  -ms-transition:transform 1.05s ease-in-out;
+}
+.divTrash{
+    content: url("https://cdn1.iconfinder.com/data/icons/hawcons/32/698908-icon-27-trash-can-128.png");
+}
+.divTrash:hover{
+  -moz-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+
+  -webkit-transition: transform 1.05s ease-in-out;
+  -moz-transition:transform 1.05s ease-in-out;
+  -ms-transition:transform 1.05s ease-in-out;
+}
+.divColor:hover {
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+
+    -webkit-transition: transform 1.05s ease-in-out;
+    -moz-transition:transform 1.05s ease-in-out;
+    -ms-transition:transform 1.05s ease-in-out;
+
+    transform: rotateX(360deg);
+    transform: rotateY(360deg);
+    transform: rotateZ(360deg);
+}
+#grid {
+    display: flex;
+    background: linear-gradient(blue, orange);
+    width: 700px;
+    margin:0px auto;
+}
+.lead, h1{
+  display: flex;
+  justify-content: center;
+}
+li.nav-item{
+  margin-left: 20px;
+  margin-top: 15px;
+}
+marquee{
+  text-shadow:2px 2px 8px #FF0000;
+}
