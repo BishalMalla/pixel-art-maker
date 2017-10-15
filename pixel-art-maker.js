@@ -3,8 +3,18 @@ var canvas=document.createElement('div');
 var divEraser=document.getElementsByClassName('eraser');
 var divColorList = document.getElementsByClassName('colorList')[0];
 var trashDiv = document.getElementsByClassName('trashDiv')[0];
+var IconName = document.getElementsByClassName('IconName')[0];
 var color='white';
 var listOfColor=['pink','violet','indigo','brown','black','gold','red','blue','green','yellow','orange','purple']
+var random = [];
+for(var i = 0;i<8 ; i++){
+    var temp = listOfColor[Math.floor(Math.random()*listOfColor.length)];
+      if(random.indexOf(temp) == -1){
+            random.push(temp);
+      }
+      else
+        i--;
+}
 var mouseIsDown=false;
 document.addEventListener('DOMContentLoaded', function () {
   createCanvas();
@@ -24,6 +34,7 @@ function createCanvas(){
   createDiv();
   createColorDiv();
   createTrashDrawing();
+  createParagraph();
 }
 function createDiv(){
   console.log("this is div");
@@ -55,14 +66,14 @@ function createDiv(){
 }
 function createColorDiv(){
     console.log("this is color div");
-    for(let i=0;i<listOfColor.length;i++){
+    for(let i=0;i<random.length;i++){
     var divColor = document.createElement('div');
     divColor.className='divColor';
-    divColor.style.width='30px';
-    divColor.style.height='25px';
-    divColor.style.backgroundColor=listOfColor[i];
-    divColor.style.marginLeft= '20px';
-    divColor.style.marginTop='30px';
+    divColor.style.width='35px';
+    divColor.style.height='30px';
+    divColor.style.backgroundColor=random[i];
+    divColor.style.marginLeft= '30px';
+    divColor.style.marginTop='13px';
     divColor.style.float='left';
     divColor.style.borderRadius ='50px';
     divColorList.appendChild(divColor);
@@ -71,14 +82,23 @@ function createColorDiv(){
 function createTrashDrawing(){
   var Div = document.createElement('div')
   Div.className='divTrash';
-  Div.style.width='30px';
-  Div.style.height='25px';
+  Div.style.width='35px';
+  Div.style.height='30px';
   Div.style.backgroundColor='white';
-  Div.style.marginLeft= '20px';
-  Div.style.marginTop='30px';
+  Div.style.marginLeft= '30px';
+  Div.style.marginTop='13px';
   Div.style.float='left';
   Div.style.borderRadius ='50px';
   trashDiv.appendChild(Div);
+}
+function createParagraph(){
+  console.log("in createLabael")
+  for(let i=0;i<random.length;i++){
+    var divIconName = document.createElement('div');
+    divIconName.className='paragraphList';
+    divIconName.textContent =random[i];
+    IconName.appendChild(divIconName);
+  }
 }
 divColorList.addEventListener("click",function(event){
   color= event.target.style.backgroundColor;

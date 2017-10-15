@@ -1,9 +1,14 @@
 body{
   background-image: url("http://www.planwallpaper.com/static/images/maxresdefault.jpg");
+  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 .colorList{
   display:flex;
   justify-content: center;
+  height:50px
 
 }
 .divColor{
@@ -11,11 +16,11 @@ body{
   content:url("https://www.iconsfind.com/wp-content/uploads/2015/11/20151129_565a6eb3ad01f-210x210.png");
 }
 .eraser{
-  width:30px;
-  height:25px;
+  width:35px;
+  height:30px;
   background-color: white;
   margin-left: 20px;
-  margin-top: 30px;
+  margin-top: 13px;
   float:left;
   border-radius:50px;
   margin-bottom: 25px;
@@ -64,15 +69,33 @@ body{
     transform: rotateY(360deg);
     transform: rotateZ(360deg);
 }
-#grid {
+.grid {
     display: flex;
-    background: linear-gradient(blue, orange);
+    background: linear-gradient(blue, #e8efff);
     width: 700px;
     margin:0px auto;
+    border: none;
+}
+.IconName{
+  display: flex;
+  justify-content: center;
+  color: white;
+  background: linear-gradient(#d3d9f1, blue);
+  width: 700px;
+  margin:0px auto;
+  border: none;
+}
+div.paragraphList{
+  margin: 0 auto;
+  width:35px;
+  height:30px;
+  /*divColor.style.marginTop='13px';*/
+  float:left;
 }
 .lead, h1{
   display: flex;
   justify-content: center;
+
 }
 li.nav-item{
   margin-left: 20px;
